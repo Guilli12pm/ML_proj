@@ -3,8 +3,10 @@ import cv2
 import sys
 from PIL import ImageGrab
 import time
+import os
 
-
+name = input("Enter name: ")
+os.mkdir("Database/"+name)
 
 faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
@@ -44,7 +46,7 @@ while numb_pic != 30:
         if i%2 == 0:
             frame = frame[y+2:y+(h-4) , x+2:x+(w-4)]
             img_name = "test_{}.png".format(numb_pic)
-            cv2.imwrite("pic/"+img_name, frame)
+            cv2.imwrite("database/"+ name + "/" +img_name, frame)
             print("{} written!".format(img_name))
             numb_pic += 1
 
