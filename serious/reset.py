@@ -1,17 +1,19 @@
 import os
 import glob
+import shutil
 
-dir1 = 'pic/'
+dir1 = 'Database/'
+
 dir2 = 'next_ite/'
 
 
-for filename1 in os.listdir(dir1):
-    if filename1.endswith(".png"):
-        os.remove(dir1 + filename1)
+for names1 in os.listdir(dir1):
+    if os.path.isdir(dir1 + names1):
+        shutil.rmtree(dir1 + names1 + "/")
 
-for filename2 in os.listdir(dir2):
-    if filename2.endswith(".png"):
-        os.remove(dir2 + filename2)
+for names2 in os.listdir(dir2):
+    if os.path.isdir(dir2 + names2):
+        shutil.rmtree(dir2 + names2 + "/")
 
 """
 files1 = glob.glob(dir1)
