@@ -4,6 +4,8 @@ import sys
 from PIL import ImageGrab
 import time
 
+
+
 faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 video_capture = cv2.VideoCapture(0)
