@@ -6,7 +6,8 @@ import time
 import os
 
 name = input("Enter name: ")
-os.mkdir("Database/"+name)
+new_name = name.replace(" ", "_")
+os.mkdir("Database/" + new_name)
 
 faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
@@ -15,7 +16,7 @@ video_capture = cv2.VideoCapture(0)
 i = 0
 numb_pic = 1
 
-while numb_pic != 30:
+while numb_pic != 31:
     i += 1
     print(i)
     # Capture frame-by-frame
@@ -42,11 +43,12 @@ while numb_pic != 30:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
     
+
     if len(list(faces)) != 0:
         if i%2 == 0:
             frame = frame[y+2:y+(h-4) , x+2:x+(w-4)]
-            img_name = "test_{}.png".format(numb_pic)
-            cv2.imwrite("database/"+ name + "/" +img_name, frame)
+            img_name = new_name+"_{}.png".format(numb_pic)
+            cv2.imwrite("database/"+ new_name + "/" +img_name, frame)
             print("{} written!".format(img_name))
             numb_pic += 1
 

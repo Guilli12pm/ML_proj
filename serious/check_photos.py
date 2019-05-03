@@ -18,13 +18,16 @@ for filename in os.listdir(directory):
 
 directory = 'Database/'
 
-print(os.listdir(directory))
+#print(os.listdir(directory))
 
 #print(os.listdir(directory + os.listdir(directory)[0]))
 
 for names in os.listdir(directory):
     if os.path.isdir(directory + names):
         os.mkdir("next_ite/" + names + "/")
+        print("\n")
+        print("Working on: ", names)
+        print("\n")
         for filename in os.listdir(directory + names + "/"):
             if filename.endswith(".png"):
                 if check_eyes(directory + names + "/",filename):
