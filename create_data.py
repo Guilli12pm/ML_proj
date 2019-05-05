@@ -7,6 +7,7 @@ import time
 import os
 
 name = input("Enter name: ")
+tot_numb_pic = int(input("\nEnter the number of pic you want to take: "))
 new_name = name.replace(" ", "_")
 os.mkdir("Database/" + new_name)
 
@@ -17,12 +18,12 @@ video_capture = cv2.VideoCapture(0)
 i = 0
 numb_pic = 1
 
-print('\n Please check that nothing covers your camera \n')
+print('\nPlease check that nothing covers your camera \n')
 
-print("Keep 'Space' pressed as long as you want to take pictures")
+#print("Keep 'Space' pressed as long as you want to take pictures")
 
 val = True
-while numb_pic != 31:
+while numb_pic <= tot_numb_pic:
 #while val:
     #while keyboard.is_pressed(' '):
         #val = False
