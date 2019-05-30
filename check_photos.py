@@ -35,4 +35,4 @@ for names in os.listdir(directory):
                     shutil.move(directory + names + "/" + filename, "next_ite/" + names + "/")
                 else:
                     print(filename, "bad")
-
+        shutil.rmtree(directory + names)
