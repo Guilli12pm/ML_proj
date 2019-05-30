@@ -2,7 +2,7 @@ import numpy as np
 import cv2  #pip install opencv-python
 import sys
 from PIL import ImageGrab  #pip install Pillow
-import keyboard #pip install keyboard
+#import keyboard #pip install keyboard
 import time
 import os
 
