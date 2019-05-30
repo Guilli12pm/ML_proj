@@ -8,4 +8,4 @@ run new_user.py to take pictures, select the correct ones and create a tar file 
 
 For project_ML.ipynb, open in colab and do 'save a copy in GitHub' after modification.
 
-Look at images.ipynb for an example of managing images with tf.data
+Look at Lab8_answers.ipynb for an example of managing images with tf.data
