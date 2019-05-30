@@ -24,15 +24,27 @@ directory = 'Database/'
 
 for names in os.listdir(directory):
     if os.path.isdir(directory + names):
-        os.mkdir("next_ite/" + names + "/")
-        print("\n")
-        print("Working on: ", names)
-        print("\n")
-        for filename in os.listdir(directory + names + "/"):
-            if filename.endswith(".png"):
-                if check_eyes(directory + names + "/",filename):
-                    print(filename, "good")
-                    shutil.move(directory + names + "/" + filename, "next_ite/" + names + "/")
-                else:
-                    print(filename, "bad")
+        if names not in os.listdir("next_ite/"):
+            os.mkdir("next_ite/" + names + "/")
+            print("\n")
+            print("Working on: ", names)
+            print("\n")
+            for filename in os.listdir(directory + names + "/"):
+                if filename.endswith(".png"):
+                    if check_eyes(directory + names + "/",filename):
+                        print(filename, "good")
+                        shutil.move(directory + names + "/" + filename, "next_ite/" + names + "/")
+                    else:
+                        print(filename, "bad")
+        else:
+            print("\n")
+            print("Working on: ", names)
+            print("\n")
+            for filename in os.listdir(directory + names + "/"):
+                if filename.endswith(".png"):
+                    if check_eyes(directory + names + "/",filename):
+                        print(filename, "good")
+                        shutil.move(directory + names + "/" + filename, "next_ite/" + names + "/")
+                    else:
+                        print(filename, "bad")
         shutil.rmtree(directory + names)
