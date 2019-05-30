@@ -4,11 +4,7 @@ This is the Machine Learning project By Guillaume Paya-Monet, Guillaume Loranche
 
 This project is about facial recognition.
 
-First run create_data.py, then check_photos.py.
-
-And finally reset.py to erase all photos.
-
-Before opening project_ML.ipynb, run make_tar.py (or 'tar -zcvf next_ite.tar.gz next_ite' on a linux terminal) to create a tar file of next_ite (neccesary in project_ML).
+run new_user.py to take pictures, select the correct ones and create a tar file (necessary in project_ML.ipynb)
 
 For project_ML.ipynb, open in colab and do 'save a copy in GitHub' after modification.
 
