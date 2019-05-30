@@ -1,6 +1,6 @@
 import numpy as np
 import cv2
-from PIL import ImageGrab
+#from PIL import ImageGrab
 
 
 def check_eyes(directory,name):
