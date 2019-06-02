@@ -67,12 +67,12 @@ for names in os.listdir("next_ite"):
             if im != ".DS_Store":
                 image = cv2.imread("new_pic/"+names+"/" + im)
                 j = 0
-                for angle in np.arange(0, 90, 15):
+                for angle in np.arange(0, 90, 30):
                     rotated = imutils.rotate_bound(image, angle)
                     cv2.imwrite("new_pic/"+names+"/"+im.strip(".png") + "_rot_anty_" + str(j) + ".png",rotated)
                     j += 1
                 j = 0
-                for angle in np.arange(-90, 0, 15):
+                for angle in np.arange(-90, 0, 30):
                     rotated = imutils.rotate_bound(image, angle)
                     cv2.imwrite("new_pic/"+names+"/"+im.strip(".png") + "_rot_clock_" + str(j) + ".png",rotated)
                     j += 1
