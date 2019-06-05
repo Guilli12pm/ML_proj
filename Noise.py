@@ -25,7 +25,7 @@ def sp_noise(image,prob):
                 output[i][j] = image[i][j]
     return output
 
-for names in ['Konstantinos_A']: #os.listdir("next_ite"):
+for names in ['to_erase']: #os.listdir("next_ite"):
     if names != ".DS_Store":
         print("Working on:", names)
         os.mkdir("new_pic/"+names)
